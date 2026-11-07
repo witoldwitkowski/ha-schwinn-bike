@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+# raw Bluetooth captures contain real ride and heart-rate data: keep them local
+captures/

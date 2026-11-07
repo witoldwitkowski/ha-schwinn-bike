@@ -1,0 +1,15 @@
+name: Tests
+on:
+  push:
+  pull_request:
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      # The pure-Python tests (protocol, ride tracker, ride log). The tests that drive the real Home Assistant code are skipped here;
+      # run them locally as described in the README (Development).
+      - run: python -m unittest discover -s tests -v

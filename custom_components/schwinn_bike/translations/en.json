@@ -1,0 +1,37 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "description": "Pick the bike. It only shows up while it is awake (press Quick Start). Close any phone app connected to it first: the bike accepts a single connection.",
+        "data": {
+          "address": "Bike",
+          "rider": "Fallback name (when the bike does not say who is riding)",
+          "user_map": "Console users -> names, e.g. 1=alice, 2=bob (the number is the user's position in the console's USER list; the name is used in the ride log and events)"
+        }
+      },
+      "bluetooth_confirm": {
+        "description": "Set up {name}? Rides are logged to the console user who rides.",
+        "data": {
+          "rider": "Fallback name (when the bike does not say who is riding)",
+          "user_map": "Console users -> names, e.g. 1=alice, 2=bob (the number is the user's position in the console's USER list; the name is used in the ride log and events)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "This bike is already configured.",
+      "no_devices_found": "No awake Schwinn 170/270 found. Press Quick Start on the bike and try again."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "description": "The bike reports which console user is riding. Rides are logged under the matching name; a max heart rate for the heart-rate filter can be given in people.json (see the README).",
+        "data": {
+          "rider": "Fallback name",
+          "user_map": "Console users -> names, e.g. 1=alice, 2=bob (the number is the user's position in the console's USER list; the name is used in the ride log and events)"
+        }
+      }
+    }
+  }
+}
